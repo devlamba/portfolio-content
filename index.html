@@ -2,10 +2,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BK45X0J9ME"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BK45X0J9ME');
+    </script>
     <meta charset="utf-8">
     <title>Simpl</title>
-    <link rel="stylesheet" href="CSS/html5reset.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/Favicon.png">
 
    
@@ -33,8 +42,20 @@
 
       <p>There is a wierd intersectionality between lqbtq and menatl and physical health. This websites gives you all the essentials you require to lead a comfortable and happy life</p>
     </main>
-      <footer>
-        <p>University of Michigan School of Information</p>
-      </footer>
+    <form action="https://formspree.io/f/xrgdoroo" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+    <footer>
+      <p>University of Michigan School of Information</p>
+    </footer>
   </body>
 </html>
