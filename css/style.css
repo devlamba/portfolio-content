@@ -123,6 +123,12 @@ footer{
 
 }
 
+footer h1{
+    padding: 30px;
+    margin: 30px;
+    background-color: rgb(39, 39, 39);
+    color:rgb(235, 235, 235);
+}
 
 
 .animated { 
