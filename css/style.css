@@ -112,7 +112,7 @@ button{
 
 }
 footer{
-    background-image: url(../images/footer.png) ;
+    background-image: url(/images/footer.png) ;
     grid-row-start: 4;
     grid-row-end: 5;
     color: #fff;
