@@ -2,6 +2,7 @@ body{
     display: grid;
     grid-template-rows: auto auto auto auto;
     font-family: 'Quicksand', sans-serif;
+
 }
 
 header{
@@ -44,10 +45,36 @@ a.active {
     background-color: #fff;
     color: rgb(41, 41, 41);
     cursor: default;
+    text-decoration: underline;
 }
+.skip>a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    left: -500px;
+    top:-40px;
+  }
+  
+  .skip>a:focus{
+    background: white;
+    top: 0;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    border: 2px solid black;
+  }
+
 
 h1{
     padding:30px;
+    padding-bottom: 100px;
     font-family: 'Quicksand', sans-serif;
     font-size: 28px;
     font-weight: bold;
@@ -67,6 +94,7 @@ main img{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    margin-top: 30px;
 
 }
 main img:hover{
@@ -76,35 +104,103 @@ main img:hover{
 figure {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 20px;
 
-  }
-
-
-
-p{
-    padding:30px;
-    font-size: 18px;
 }
 
+p{
+    font-size: 16px;
+    text-align: left;
+}
+
+figure p{
+    padding:20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+figure p:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+}
+
+.itema{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+
+}
+.itemb{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+}
+.itemc{
+    padding: 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+}
+.itemd{
+    padding: 20px;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+}
 aside{
     grid-row-start: 3;
     grid-row-end: 4;
+    padding:100px;
+    font-style: italic;
+}
+
+aside p{
+    text-align: center;
+    font-size: 14px;
 }
 
 form{
     padding: 30px;
     margin: 30px;
+    color: #fff;
     background-color: rgb(39, 39, 39);
+}
+label{
+    color: #fff;
+    padding-bottom: 20px;
+    
 }
 input{
     width: 100%;
     min-height: 28px ;
     overflow: scroll;
+
 }
 textarea{
     width: 100%;
     height: 100px;
     overflow: scroll;
+
 }
 button{
     width: 100px;
@@ -118,7 +214,7 @@ footer{
     color: #fff;
     text-align: center;
     font-weight: bold;
-    padding-top: 45px;
+    padding: 45px;
     
 
 }
@@ -134,6 +230,7 @@ footer h1{
 .animated { 
     border: none;
     width: 28px;
+    height: 28px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
@@ -142,6 +239,10 @@ footer h1{
     animation-duration: 1s; 
     -webkit-animation-fill-mode: both; 
     animation-fill-mode: both; 
+ }
+ .animated:hover{
+    filter: drop-shadow(0px 0px rgb(41, 41, 41));
+
  }
  
  @-webkit-keyframes bounce { 
@@ -167,4 +268,142 @@ footer h1{
         -webkit-animation-duration: 0s;
         animation-duration: 0s; 
      }
+}
+@media only screen and (min-width: 768px) {
+
+    li {
+        float: left;
+    }
+    p{
+        font-size: 18px;
+        text-align: left;
+    }
+    aside p{
+        text-align: center;
+        font-size: 16px;
+    }
+    figure {
+        display: flex;
+        flex-wrap: no-wrap;
+        justify-content: center;
+        column-gap: 50px;
+    }
+
+    .gall{
+        object-fit: cover;
+        object-position: center;
+        height: 230px;
+        width: 230px;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .b{
+        width: 100%;
+    
+    }
+    figure p {
+        width:200px;
+    }
+    .container{
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 100px;
+        column-gap: 100px;
+
+    }
+    .itema{
+        padding-left: 100px;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      
+        
+    }
+    .itemb{
+        padding-left: 100px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+       
+        
+    
+    }
+    .itemc{
+        background-color: rgb(245, 245, 245);
+        border-style: solid;
+        border-color: rgb(41, 41, 41);;
+        border-width: 4px 0px 4px 4px;
+        padding: 40px;
+        padding-right: 80px;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 5;
+       
+        
+    }
+    .itemd{
+        background-color: rgb(245, 245, 245);
+        border-style: solid;
+        border-color: rgb(41, 41, 41);;
+        border-width: 4px 0px 4px 4px;
+        padding: 40px;
+        padding-right: 80px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    
+        
+    }
+   
+    /* #ind{
+        height: 400px;
+        width: 400px;
+        margin-bottom: 100px;
+    } */
+
+}
+
+@media only screen and (min-width: 986px){
+    
+    .gall{
+        height: 360px;
+        width: 360px;
+        margin-top: 20px;
+    }
+    figure p {
+        width:300px;
+    }
+    p{
+        font-size: 20px;
+        text-align: left;
+    }
+    aside p{
+        text-align: center;
+        font-size: 18px;
+    }
+    .b{
+        max-height: 400px;
+    
+    }
+    .itemc{
+        padding: 70px;
+        padding-right: 200px;  
+    }
+    .itemd{
+        padding: 70px;
+        padding-right: 200px;
+    }
+    
+        
+    /* #ind{
+        height: 400px;
+        width: 400px;
+        margin-bottom: 100px;
+    } */
 }
